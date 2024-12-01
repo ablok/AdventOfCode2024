@@ -1,0 +1,19 @@
+{
+  "name": "adventofcode2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "01a": "ts-node 01/a.ts",
+    "01b": "ts-node 01/b.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "prettier": "^3.4.1",
+    "ts-node": "^10.9.2"
+  }
+}
