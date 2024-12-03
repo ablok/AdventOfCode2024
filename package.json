@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "01a": "ts-node 01/a.ts",
-    "01b": "ts-node 01/b.ts"
+    "01b": "ts-node 01/b.ts",
+    "02a": "ts-node 02/a.ts",
+    "02b": "ts-node 02/b.ts",
+    "03a": "ts-node 03/a.ts",
+    "03b": "ts-node 03/b.ts"
   },
   "author": "",
   "license": "ISC",
