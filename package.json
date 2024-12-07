@@ -12,7 +12,9 @@
     "04a": "ts-node 04/a.ts",
     "04b": "ts-node 04/b.ts",
     "05a": "ts-node 05/a.ts",
-    "05b": "ts-node 05/b.ts"
+    "05b": "ts-node 05/b.ts",
+    "06a": "ts-node 06/a.ts",
+    "06b": "ts-node 06/b.ts"
   },
   "author": "",
   "license": "ISC",

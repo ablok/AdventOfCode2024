@@ -1,42 +1,40 @@
-import fs from "node:fs"
+import fs from "node:fs";
 
-const data = fs.readFileSync("02/input.txt", { encoding: "utf8" })
-const reports = data
-    .split("\n")
-    .map((line) => line.split(" ").map((item) => parseInt(item)))
+const data = fs.readFileSync("02/input.txt", { encoding: "utf8" });
+const reports = data.split("\n").map((line) => line.split(" ").map((item) => parseInt(item)));
 
 const safeReports = reports.filter((report) => {
     if (isSafe(report)) {
-        return true
+        return true;
     }
 
     for (let i = 0; i < report.length; i++) {
         if (isSafe(report.slice(0, i).concat(report.slice(i + 1)))) {
-            return true
+            return true;
         }
     }
 
-    return false
-})
+    return false;
+});
 
-console.log(safeReports.length)
+console.log(safeReports.length);
 
 function isSafe(report: number[]) {
-    const diffs: number[] = []
+    const diffs: number[] = [];
     for (let i = 1; i < report.length; i++) {
-        diffs.push(report[i] - report[i - 1])
+        diffs.push(report[i] - report[i - 1]);
     }
 
-    let previousDiff
+    let previousDiff;
     for (let i = 0; i < diffs.length; i++) {
-        const currentDiff = diffs[i]
+        const currentDiff = diffs[i];
         if (previousDiff && currentDiff * previousDiff < 0) {
-            return false
+            return false;
         }
         if (currentDiff === 0 || Math.abs(currentDiff) > 3) {
-            return false
+            return false;
         }
-        previousDiff = currentDiff
+        previousDiff = currentDiff;
     }
-    return true
+    return true;
 }
