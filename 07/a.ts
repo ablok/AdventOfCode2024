@@ -17,7 +17,6 @@ const calculations: Calculation[] = fs
         return { result: parseInt(result[0]), values, permutations: [] };
     });
 
-const total = 0;
 const result = calculations
     .map((calculation) => {
         calculation.permutations = getPermutations(calculation.values);
