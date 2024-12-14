@@ -33,4 +33,4 @@ const checksum = blocks.reduce((total: number, current: number | string, index) 
     return total;
 }, 0);
 
-console.log(checksum)
+console.log(checksum);
